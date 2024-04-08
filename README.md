@@ -21,3 +21,20 @@ OPENAI_API_KEY = [ENTER YOUR OPENAI API KEY HERE]
 PINECONE_API_KEY = [ENTER YOUR PINECONE API KEY HERE]
 PINECONE_API_ENV = [ENTER YOUR PINECONE API ENVIRONMENT HERE]
 ```
+
+## Process
+
+- Data Preparation: Structure your knowledge base (e.g., ScaleX Innovation information) for optimal retrieval. Consider formats like text files, CSV, or a database.
+- Vectorization: Use OpenAI’s embedding models to convert textual data into vector representations, enabling efficient similarity search.
+Retrieval Component: Choose a vector database (e.g., Faiss, Pinecone) to store and search the embeddings.
+- LangChain Integration:
+-- Create a chain for the retrieval process, querying your vector database.
+-- Construct a chain for generating text (using OpenAI’s text generation models).
+-- Combine the chains, feeding retrieved context into the text generation chain.
+- Conversation Flow: Design the logic for how your chatbot interacts with users, incorporating the RAG system for informed responses.
+
+## Key Points
+
+- RAG augments standard chatbots with the ability to reference external knowledge sources.
+- The quality of your data preparation directly impacts retrieval effectiveness.
+- LangChain streamlines the integration of retrieval and generation components.
